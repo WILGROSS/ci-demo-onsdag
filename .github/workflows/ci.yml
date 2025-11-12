@@ -23,5 +23,11 @@ jobs:
       - name: Build with maven
         run: mvn -B package --file pom.xml
 
-      - name: Run tests
-        run: mvn test
+  Test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Run tests
+      run: mvn test
